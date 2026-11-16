@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menopausa em Equilíbrio — Guia digital para mulheres</title>
+<meta name="description" content="Um guia simples, em linguagem de gente, para entender o que acontece com o seu corpo na menopausa e ter por onde começar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ====== COLE AQUI O CÓDIGO DO PIXEL DO META (se tiver) ====== -->
+
+<style>
+:root{
+  --bg:#FFF9F4; --ink:#2B1B22; --muted:#6D5A63; --wine:#5A1B3B; --rose:#C8416B; --rose-d:#A8325A;
+  --sand:#F4E6DC; --line:#EBD9CC; --gold:#B8860B; --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,Arial,sans-serif;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;padding-bottom:84px}
+.wrap{width:min(100% - 36px,720px);margin:0 auto}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.12;color:var(--wine);letter-spacing:-.01em}
+h1{font-size:clamp(34px,8.4vw,54px);font-weight:800}
+h2{font-size:clamp(28px,6.4vw,40px);font-weight:800;margin-bottom:18px}
+h3{font-size:21px;font-weight:600}
+p{margin-bottom:16px}
+em.hl{font-style:normal;color:var(--rose-d)}
+section{padding:60px 0}
+.alt{background:var(--sand)}
+.kicker{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--rose-d);margin-bottom:16px}
+
+/* hero */
+.hero{padding:44px 0 56px;background:linear-gradient(180deg,#FBEBE3 0%,var(--bg) 100%)}
+.hero .sub{font-size:20px;color:var(--muted);margin:20px 0 28px}
+.cta{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:460px;min-height:64px;padding:16px 24px;background:var(--rose);color:#fff;font-weight:700;font-size:19px;text-decoration:none;border-radius:14px;box-shadow:0 10px 24px rgba(200,65,107,.32);transition:transform .15s,background .15s;text-align:center}
+.cta:hover{background:var(--rose-d);transform:translateY(-2px)}
+.micro{font-size:14px;color:var(--muted);margin-top:14px;line-height:1.5}
+.micro b{color:var(--ink)}
+
+/* dor */
+.pains{display:grid;gap:12px;margin-top:22px}
+.pain{background:var(--white);border:1px solid var(--line);border-left:5px solid var(--rose);border-radius:10px;padding:18px 20px;font-weight:500}
+.pain span{display:block;font-weight:400;color:var(--muted);font-size:16px;margin-top:4px}
+.bridge{margin-top:26px;font-family:Fraunces,Georgia,serif;font-size:24px;line-height:1.3;color:var(--wine);font-weight:600}
+
+/* empatia */
+.quote{border-left:4px solid var(--gold);padding:4px 0 4px 20px;margin:22px 0;font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.35;color:var(--wine)}
+
+/* conteúdo */
+.mods{display:grid;gap:14px;margin-top:24px}
+.mod{display:flex;gap:16px;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:20px}
+.mod .n{flex:0 0 40px;height:40px;border-radius:50%;background:var(--wine);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.mod p{margin:6px 0 0;color:var(--muted);font-size:16px}
+.mod.bonus{background:#FFF4E0;border-color:#EBCB8B}
+.mod.bonus .n{background:var(--gold)}
+.tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:var(--gold);color:#fff;padding:2px 8px;border-radius:99px;margin-left:8px;vertical-align:middle}
+
+/* aviso honesto */
+.note{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px;margin-top:6px;font-size:16px;color:var(--muted)}
+.note b{color:var(--ink)}
+
+/* oferta */
+.offer{background:var(--wine);color:#fff;text-align:center}
+.offer h2{color:#fff}
+.box{background:var(--white);color:var(--ink);border-radius:20px;padding:32px 22px;margin-top:24px}
+.box ul{list-style:none;text-align:left;max-width:420px;margin:0 auto 22px}
+.box li{padding:6px 0 6px 30px;position:relative;font-size:17px}
+.box li:before{content:"✓";position:absolute;left:0;color:var(--rose);font-weight:800}
+.price{font-family:Fraunces,Georgia,serif;font-size:64px;font-weight:800;color:var(--wine);line-height:1}
+.price small{font-size:20px;font-weight:600}
+.once{color:var(--muted);font-size:15px;margin:6px 0 22px}
+.box .cta{margin:0 auto}
+.guar{display:flex;gap:14px;align-items:flex-start;text-align:left;background:rgba(255,255,255,.1);border-radius:14px;padding:18px;margin-top:22px;font-size:16px}
+.guar b{display:block;margin-bottom:2px}
+
+/* faq */
+details{background:var(--white);border:1px solid var(--line);border-radius:12px;margin:10px 0}
+summary{cursor:pointer;padding:18px 20px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font-size:24px;line-height:1;color:var(--rose)}
+details[open] summary:after{content:"–"}
+details p{padding:0 20px 18px;margin:0;color:var(--muted);font-size:16px}
+
+/* final */
+.final{text-align:center}
+.final .cta{margin:22px auto 0}
+
+footer{padding:36px 0;font-size:13px;color:var(--muted);line-height:1.6;border-top:1px solid var(--line)}
+footer p{margin-bottom:10px}
+
+/* barra fixa mobile */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(255,249,244,.97);border-top:1px solid var(--line);padding:10px 16px;transform:translateY(110%);transition:transform .25s;backdrop-filter:blur(6px)}
+.bar.show{transform:none}
+.bar .cta{max-width:none;min-height:54px;font-size:17px;padding:12px}
+@media (min-width:760px){body{font-size:19px}.bar{display:none}body{padding-bottom:0}}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker">Guia digital para mulheres na menopausa</span>
+    <h1>Ninguém te explicou a menopausa direito. <em class="hl">Agora alguém vai.</em></h1>
+    <p class="sub">Um guia simples, em linguagem de gente, para você entender o que está acontecendo com o seu corpo e ter por onde começar a se sentir você de novo.</p>
+    <a href="#" class="cta" data-cta>Quero meu guia por R$ 19,90 →</a>
+    <p class="micro"><b>Acesso imediato</b> depois da confirmação do pagamento · Pagamento seguro · Garantia de 7 dias</p>
+  </div>
+</header>
+
+<!-- ============ DOR ============ -->
+<section>
+  <div class="wrap">
+    <span class="kicker">Você se reconhece aqui?</span>
+    <h2>Você está cansada de se sentir <em class="hl">uma estranha</em> no próprio corpo.</h2>
+    <div class="pains">
+      <div class="pain">São 3 da manhã e você está acordada de novo.<span>O sono que antes vinha fácil virou uma batalha, e o dia seguinte cobra o preço.</span></div>
+      <div class="pain">O calor sobe no meio da reunião, do mercado, da conversa.<span>E você tenta disfarçar enquanto o corpo faz o que quer.</span></div>
+      <div class="pain">Você perde a paciência com quem ama, e depois se sente culpada.<span>Não era assim que você queria ser tratada, nem tratar os outros.</span></div>
+      <div class="pain">Você olha no espelho e sente que se perdeu no caminho.<span>A energia, o humor, a disposição… parece que tudo mudou de uma vez.</span></div>
+      <div class="pain">E o pior: parece que ninguém explica nada.<span>Você ouve “é da idade” e segue sozinha, sem saber por onde começar.</span></div>
+    </div>
+    <p class="bridge">Se você disse “sou eu” para pelo menos uma dessas, continue lendo. Esta página foi feita para você.</p>
+  </div>
+</section>
+
+<!-- ============ EMPATIA ============ -->
+<section class="alt">
+  <div class="wrap">
+    <h2>Não é frescura. Não é drama. E <em class="hl">você não está sozinha.</em></h2>
+    <p>A menopausa mexe com o sono, o humor, a energia e o corpo. Muitas mulheres chegam nessa fase sem ninguém ter conversado com elas sobre o que esperar, e passam anos tentando se virar sozinhas.</p>
+    <div class="quote">Informação clara muda a forma como você atravessa essa fase.</div>
+    <p>Quando você entende o que está acontecendo, o medo diminui. E quando você tem um plano simples para o dia a dia, você deixa de viver apenas reagindo ao que o corpo faz.</p>
+    <p>Foi pensando nisso que nasceu o <b>Menopausa em Equilíbrio</b>: um guia direto, sem termo difícil, para você sair do escuro.</p>
+  </div>
+</section>
+
+<!-- ============ O QUE VOCÊ RECEBE ============ -->
+<section>
+  <div class="wrap">
+    <span class="kicker">O que você recebe</span>
+    <h2>Menopausa em Equilíbrio</h2>
+    <p>Um guia digital que você lê no celular, no seu ritmo, e começa a aplicar no mesmo dia.</p>
+    <div class="mods">
+      <!-- CONFIRME: ajuste os títulos e descrições abaixo para o que o produto realmente entrega -->
+      <div class="mod"><div class="n">1</div><div><h3>Entendendo o que acontece com você</h3><p>Uma explicação simples sobre as mudanças dessa fase, para você parar de se perguntar “o que há de errado comigo?”.</p></div></div>
+      <div class="mod"><div class="n">2</div><div><h3>Rotina de 3 minutos para o seu dia</h3><p>Um passo a passo curto, fácil de encaixar na correria, para você ter um momento diário de calma e cuidado consigo.</p></div></div>
+      <div class="mod"><div class="n">3</div><div><h3>Alimentação do dia a dia</h3><p>Ideias práticas de cardápio para você montar suas refeições sem complicação.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AVISO HONESTO ============ -->
+<section class="alt">
+  <div class="wrap">
+    <h2>Uma coisa importante, <em class="hl">com toda a honestidade.</em></h2>
+    <div class="note">
+      <p><b>Este guia não substitui consulta médica.</b> Ele é um material de informação e de apoio ao seu dia a dia. Cada corpo é diferente, e não prometemos resultado específico.</p>
+      <p style="margin:0">Se você sente sintomas intensos, converse com seu médico. O guia ajuda você a chegar na consulta mais segura e mais bem informada.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OFERTA ============ -->
+<section class="offer" id="oferta">
+  <div class="wrap">
+    <span class="kicker" style="color:#F6C9D6">Comece hoje</span>
+    <h2>Dê o primeiro passo para atravessar essa fase com mais clareza.</h2>
+    <div class="box">
+      <ul>
+        <li>Guia digital Menopausa em Equilíbrio</li>
+        <li>Rotina de 3 minutos para o dia a dia</li>
+        <li>Ideias de alimentação do dia a dia</li>
+        <li>Acesso imediato no celular</li>
+      </ul>
+      <div class="price"><small>R$</small> 19,90</div>
+      <p class="once">Pagamento único · sem mensalidade</p>
+      <a href="#" class="cta" data-cta>Quero meu guia agora →</a>
+      <p class="micro">Pagamento seguro pela Perfect Pay</p>
+    </div>
+    <div class="guar">
+      <div style="font-size:30px;line-height:1">🛡️</div>
+      <div><b>Garantia de 7 dias</b>Se o guia não for para você, é só pedir o reembolso dentro de 7 dias após a compra.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section>
+  <div class="wrap">
+    <h2>Perguntas <em class="hl">frequentes</em></h2>
+    <details><summary>O guia substitui o acompanhamento médico?</summary><p>Não. O guia é um material de informação e apoio. Ele não diagnostica nem trata nenhuma condição. Continue com seu médico para qualquer decisão sobre sua saúde.</p></details>
+    <details><summary>Como eu recebo o guia?</summary><p>Assim que o pagamento for confirmado, você recebe o acesso no e-mail usado na compra. Com Pix, a confirmação costuma ser imediata.</p></details>
+    <details><summary>Preciso entender de tecnologia?</summary><p>Não. É só abrir no celular e ler. Se tiver qualquer dificuldade para acessar, é só falar com a gente pelo e-mail de suporte.</p></details>
+    <details><summary>Vai funcionar para mim?</summary><p>Cada mulher vive a menopausa de um jeito, e por isso não prometemos um resultado específico. O que o guia entrega é informação clara e uma rotina simples para você testar no seu ritmo.</p></details>
+    <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. Se não fizer sentido para você, é só pedir o reembolso.</p></details>
+  </div>
+</section>
+
+<!-- ============ FECHAMENTO ============ -->
+<section class="alt final">
+  <div class="wrap">
+    <h2>Você merece viver essa fase <em class="hl">com informação,</em> e não no escuro.</h2>
+    <p>Por R$ 19,90, você começa hoje.</p>
+    <a href="#" class="cta" data-cta>Quero meu guia agora →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b>Aviso importante:</b> o conteúdo deste produto é informativo e educacional. Ele não substitui consulta, diagnóstico ou tratamento médico. Procure sempre um profissional de saúde. Os resultados variam de pessoa para pessoa.</p>
+    <p>Este site não é afiliado ao Facebook, Instagram ou Meta Platforms, Inc., nem endossado por eles. Facebook e Instagram são marcas registradas da Meta Platforms, Inc.</p>
+    <p>Suporte: <!-- TROQUE PELO SEU E-MAIL --> seuemail@exemplo.com</p>
+    <p>© <span id="y"></span> Menopausa em Equilíbrio. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- barra fixa no celular -->
+<div class="bar" id="bar"><a href="#" class="cta" data-cta>Quero meu guia · R$ 19,90</a></div>
+
+<script>
+/* ====================================================
+   >>> COLE AQUI O LINK DO CHECKOUT DA PERFECT PAY <<<
+   ==================================================== */
+var CHECKOUT_URL = "https://checkout.perfectpay.com.br/pay/PPU38CQHOKD";
+
+document.getElementById("y").textContent = new Date().getFullYear();
+
+document.querySelectorAll("[data-cta]").forEach(function(a){
+  a.setAttribute("href", CHECKOUT_URL);
+  a.addEventListener("click", function(){
+    // Evento "Finalização iniciada" só quando a pessoa clica no botão
+    try { if (typeof fbq === "function") fbq("track", "InitiateCheckout"); } catch(e){}
+  });
+});
+
+// mostra a barra fixa depois de passar o topo da página
+var bar = document.getElementById("bar"), hero = document.querySelector(".hero");
+if ("IntersectionObserver" in window) {
+  new IntersectionObserver(function(e){ bar.classList.toggle("show", !e[0].isIntersecting); }).observe(hero);
+} else { bar.classList.add("show"); }
+</script>
+</body>
+</html>
